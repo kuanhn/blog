@@ -1,15 +1,21 @@
 language: node_js
-node_js:
-- 8.9.4
+node_js: stable
 branches:
   only:
   - source
 
 install: npm install
-
+before_install:
+- git submodule update --init --remote --recursive
 before_script:
-- git config --global user.name "iamkots"
-- git config --global user.email "kotskute@gmail.com"
-- sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
-
+- git config --global user.name $__GITHUB_USERNAME__
+- git config --global user.email $__GITHUB_EMAIL__
+- sed -i "s/__GITHUB_TOKEN__/$__GITHUB_TOKEN__/" _config.yml
+- sed -i "s/__GITHUB_USERNAME__/$__GITHUB_USERNAME__/" _config.yml
 script: npm run build
+after_script:
+- cd /home/travis/build/$__GITHUB_USERNAME__/blog/.deploy_git/
+- echo "kots.space" > CNAME
+- git add CNAME
+- git commit -m "Add CNAME"
+- git push https://$__GITHUB_USERNAME__:$__GITHUB_TOKEN__@github.com/$__GITHUB_USERNAME__/blog.git
