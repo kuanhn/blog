@@ -1,12 +1,12 @@
 language: node_js
-node_js:
-- 8.9.4
+node_js: stable
 branches:
   only:
   - source
 
 install: npm install
-
+before_install:
+- git submodule update --init --remote --recursive
 before_script:
 - git config --global user.name "iamkots"
 - git config --global user.email "kotskute@gmail.com"
