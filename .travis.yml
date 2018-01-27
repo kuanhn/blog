@@ -13,3 +13,10 @@ before_script:
 - sed -i "s/__GITHUB_TOKEN__/${__GITHUB_TOKEN__}/" _config.yml
 
 script: npm run build
+
+after_script:
+- cd /home/travis/build/iamkots/blog/.deploy_git/
+- echo "kots.space" > CNAME
+- git add CNAME
+- git commit -m "Add CNAME"
+- git push https://iamkots@github.com/iamkots/blog.git
