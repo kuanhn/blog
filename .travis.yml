@@ -5,14 +5,15 @@ branches:
   - source
 
 install: npm install
-before_install:
-- git submodule update --init --remote --recursive
+
 before_script:
 - git config --global user.name ${__GITHUB_USERNAME__}
 - git config --global user.email ${__GITHUB_EMAIL__}
 - sed -i "s/__GITHUB_TOKEN__/$__GITHUB_TOKEN__/" _config.yml
 - sed -i "s/__GITHUB_USERNAME__/$__GITHUB_USERNAME__/g" _config.yml
+
 script: npm run build
+
 after_script:
 - cd /home/travis/build/${__GITHUB_USERNAME__}/blog/.deploy_git/
 - echo "kots.space" > CNAME
