@@ -79,5 +79,5 @@ theme: hueman
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://__GITHUB_TOKEN__@github.com/iamkots/blog.git
+  repo: https://__GITHUB_USERNAME__:__GITHUB_TOKEN__@github.com/__GITHUB_USERNAME__/blog.git
   branch: master
