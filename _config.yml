@@ -11,8 +11,8 @@ language: en
 timezone: Japan
 
 # URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://kots.space
+## If your site is put in a subdirectory, set url as 'https://yoursite.com/child' and root as '/child/'
+url: https://kots.space
 root: /
 permalink: :category/:title/
 permalink_defaults:
@@ -81,3 +81,17 @@ deploy:
   type: git
   repo: https://__GITHUB_USERNAME__:__GITHUB_TOKEN__@github.com/__GITHUB_USERNAME__/blog.git
   branch: master
+
+# Render math equations
+## Docs: https://github.com/hexojs/hexo-math
+math:
+  engine: 'mathjax' # or 'katex'
+  mathjax:
+    src: "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    config:
+      # MathJax config
+  katex:
+    css: #custom_css_source
+    js: #custom_js_source # not used
+    config:
+      # KaTeX config
