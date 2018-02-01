@@ -85,7 +85,7 @@ deploy:
 # Render math equations
 ## Docs: https://github.com/hexojs/hexo-math
 math:
-  engine: 'mathjax' # or 'katex'
+  engine: 'katex' # 'mathjax' or 'katex'
   mathjax:
     src: "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
     config:
