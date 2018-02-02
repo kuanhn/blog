@@ -33,7 +33,7 @@ new_post_name: :title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
-filename_case: 0
+filename_case: 1
 render_drafts: false
 post_asset_folder: false
 relative_link: false
@@ -81,18 +81,3 @@ deploy:
   type: git
   repo: https://__GITHUB_USERNAME__:__GITHUB_TOKEN__@github.com/__GITHUB_USERNAME__/blog.git
   branch: master
-
-# Render math equations
-## Docs: https://github.com/hexojs/hexo-math
-math:
-  engine: 'katex' # 'mathjax' or 'katex'
-  mathjax:
-    src: "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-    config:
-      # MathJax config
-  katex:
-    css: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"
-    js: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.js"
-    config:
-      throwOnError: false
-      errorColor: "#cc0000"
