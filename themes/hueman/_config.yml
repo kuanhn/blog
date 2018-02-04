@@ -10,12 +10,12 @@ customize:
     logo:
         width: 165
         height: 60
-        url: images/logo-small.png
+        url: images/logo.png
     theme_color: '#006bde'
     highlight: androidstudio
     sidebar: left # sidebar position, options: left, right
     thumbnail: true # enable posts thumbnail, options: true, false
-    favicon: # path to favicon
+    favicon: css/images/favicon.png
     social_links: # for more icons, please see http://fontawesome.io/icons/#brand
         facebook: https://www.facebook.com/iamkots/
         instagram: https://www.instagram.com/iamkots/
