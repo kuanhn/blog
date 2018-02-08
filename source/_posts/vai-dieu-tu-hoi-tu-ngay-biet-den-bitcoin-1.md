@@ -5,7 +5,7 @@ tags:
     - blockchain
     - cryptocurrencies
 category: Read
-thumbnail: css/images/20180131/thumbnail.jpg
+thumbnail: /css/images/20180131/thumbnail.jpg
 ---
 # Tản mạn
 > Đứng dưới cái tiết trời 3ºC nhìn ngắm nguyệt thực toàn phần âu cũng làm con người ta dễ hoài niệm. Cái tâm trạng đó cũng dễ khiến người ta chỉ cần nhìn vào cái biểu đồ nến thôi cũng gợi nhớ về bao chuyện từ hồi chân ướt chân ráo bước vào tìm hiểu Bitcoin.
@@ -36,8 +36,9 @@ Nhớ lại lúc học về __hash__ thì được dạy nó có những tính c
 Với mấy tính chất đó thì luôn đi kèm với mấy ví dụ ứng dụng như là _Message digests_ hoặc là _Commitment scheme_ hồi trên giảng đường. 
 ## Block là gì?
 Khi xem lại hết mấy cái ví dụ về __hash__ vẫn chưa thấy sự liên quan ở đây nên mình chuyển vấn đề tìm hiểu sang __block__. Sau chỉ một lần tìm kiếm Google cũng đã nhanh chóng có được câu trả lời như sau trên Wikipedia.
->Mọi dữ liệu trên mạng Internet đều rất dễ dàng bị sao chép, mỗi giao dịch Bitcoin cũng chỉ là một khối (__block__) thông tin. Bình thường, khi giao dịch trực tuyến, chúng ta sẽ cần đến một bên trung gian thứ ba mà chúng ta tin tưởng (ví dụ: công ty Paypal, công ty Ngân Lượng, Ngân hàng Vietcombank,...) với một cơ sở dữ liệu tập trung để xác minh giao dịch nhằm chống gian lận khi kẻ gian sử dụng lại khối thông tin này nhiều lần. Công nghệ __blockchain__ đã giải quyết được bài toán này (__double-spending__) mà không cần tới bên trung gian thứ ba tin cậy. __Blockchain__ là một cuốn sổ cái ghi lại tất cả các giao dịch. 
-
+{% blockquote Blockchain https://vi.wikipedia.org/wiki/Bitcoin Wikipedia %}
+Mọi dữ liệu trên mạng Internet đều rất dễ dàng bị sao chép, mỗi giao dịch Bitcoin cũng chỉ là một khối (__block__) thông tin. Bình thường, khi giao dịch trực tuyến, chúng ta sẽ cần đến một bên trung gian thứ ba mà chúng ta tin tưởng (ví dụ: công ty Paypal, công ty Ngân Lượng, Ngân hàng Vietcombank,...) với một cơ sở dữ liệu tập trung để xác minh giao dịch nhằm chống gian lận khi kẻ gian sử dụng lại khối thông tin này nhiều lần. Công nghệ __blockchain__ đã giải quyết được bài toán này (__double-spending__) mà không cần tới bên trung gian thứ ba tin cậy. __Blockchain__ là một cuốn sổ cái ghi lại tất cả các giao dịch. 
+{% endblockquote %}
 Không tìm thì thôi tìm thì lại thấy xuất hiện bao nhiêu là từ khoá mới để tìm hiểu. Thôi cứ từ từ bóc tách từng thằng một đọc xem sao.
 ## Blockchain là gì?
 Khi tìm hiểu tới đây thì mọi đường dẫn đều nói đến Bitcoin thoạt đầu còn nghĩ __blockchain__ là một khái niệm được định nghĩa bên trong Bitcoin. Sau hai ba trang đều có cái mở đầu giống nhau _được phát minh bởi Satoshi Nakamoto dưới dạng phần mềm mã nguồn mở từ năm 2009_ thì mình quyết định tìm luôn cái phát minh đấy để đọc xem nó như thế nào. Và mình tìm thấy paper [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf) trong vài kết quả search. 
@@ -111,4 +112,4 @@ Có thể lúc này bạn sẽ nghĩ rằng vấn đề hoàn toàn phụ thu�
 Vấn đề dễ sụp đổ này được giải quyết ra sao? Rồi các giải pháp đó có lỗ hổng gì không? Sau đó lại được cải tiến như thế nào? Cứ theo những câu hỏi như vậy mình đã ngộ thêm ra điều gì?
 
 _Điều này sẽ còn chia sẻ ở bài sắp tới..._
-## _Áp dụng vào Bitcoin ra sao?_
+[_Áp dụng vào Bitcoin ra sao?_](../vai-dieu-tu-hoi-tu-ngay-biet-den-bitcoin-2/)
