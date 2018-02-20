@@ -81,3 +81,8 @@ deploy:
   type: git
   repo: https://__GITHUB_USERNAME__:__GITHUB_TOKEN__@github.com/__GITHUB_USERNAME__/blog.git
   branch: master
+
+# Sitemap
+## Docs: https://www.npmjs.com/package/hexo-generator-seo-friendly-sitemap
+sitemap:
+  path: sitemap.xml
