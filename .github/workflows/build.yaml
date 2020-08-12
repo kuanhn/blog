@@ -24,8 +24,6 @@ jobs:
     - name: Install Dependencies
       if: steps.cache.outputs.cache-hit != 'true'
       run: npm install
-    - name: Check dependencies update
-      run: ./node_modules/npm-check-updates/bin/ncu -u
     - name: Build static files
       run: |
         sed -i "s/__GITHUB_TOKEN__/${{ secrets.GITHUB_TOKEN }}/g" _config.yml
