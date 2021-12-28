@@ -16,21 +16,21 @@
 <meta property="og:site_name" content="Kots blog">
 <meta property="og:description" content="Liệu Bitcoin có thể là nơi mình kiếm được tiền từ đó? Lần này mình sẽ mở đầu bằng câu hỏi mà hiện tại khi viết bài viết này mình vẫn chưa thể tự trả lời được. Trước những biến động gần đây thì có thể">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://kuanhn.github.io/css/images/20180202/thumbnail.jpg">
+<meta property="og:image" content="https://kuanhn.github.io/blog/css/images/20180202/thumbnail.jpg">
 <meta property="article:published_time" content="2018-02-02T15:36:13.000Z">
-<meta property="article:modified_time" content="2021-12-28T15:56:41.513Z">
+<meta property="article:modified_time" content="2021-12-28T16:40:35.959Z">
 <meta property="article:author" content="Quan Hoang">
 <meta property="article:tag" content="blockchain">
 <meta property="article:tag" content="cryptocurrencies">
 <meta property="article:tag" content="bitcoin">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://kuanhn.github.io/css/images/20180202/thumbnail.jpg">
+<meta name="twitter:image" content="https://kuanhn.github.io/blog/css/images/20180202/thumbnail.jpg">
     
 
     
 
     
-        <link rel="icon" href="/blog/css/images/favicon.png" />
+        <link rel="icon" href="/blog/blog/css/images/favicon.png" />
     
 
     
@@ -201,10 +201,10 @@
 <li>Làm thế nào để bitcoins có được giá trị trao đổi?</li>
 </ol>
 <h1 id="Mot-block-cua-bitcoin-se-nhu-the-nao"><a href="#Mot-block-cua-bitcoin-se-nhu-the-nao" class="headerlink" title="Một block của bitcoin sẽ như thế nào?"></a>Một block của bitcoin sẽ như thế nào?</h1><p>Như đã nói <strong>bitcoin</strong> được xây dựng dựa trên công nghệ blockchain nên thôi cứ bắt đầu từ đơn vị nhỏ nhất là một block xem nó như thế nào. Dưới đây là hình ảnh mô tả blockchain của <strong>bitcoin</strong>.</p>
-<p><img src="/css/images/20180202/bitcoin-block-chain.jpeg" alt="Bitcoin-blockchain"></p>
+<p><img src="/blog/css/images/20180202/bitcoin-block-chain.jpeg" alt="Bitcoin-blockchain"></p>
 <p>Ở đó chuỗi chính (màu vàng) bao gồm chuỗi block dài nhất tính từ block khởi đầu (genesis). Block màu đen không được chấp nhận do không đạt sự đồng thuận của mạng lưới.</p>
 <p>Còn về chi tiết một block sẽ có những phần như sau:</p>
-<p><img src="/css/images/20180202/bitcoin-block-structure.jpeg" alt="Bitcoin’s Block Structure"></p>
+<p><img src="/blog/css/images/20180202/bitcoin-block-structure.jpeg" alt="Bitcoin’s Block Structure"></p>
 <ul>
 <li>Magic number (4 bytes): Đây là một số nhận diện cho mạng Blockchain do đó có giá trị không đổi là 0xD9B4BEF9. Nó chỉ ra điểm <em>Khởi đầu của block</em> và <em>Dữ liệu từ mạng lưới sản xuất</em>.</li>
 <li>Block size (4 bytes): Cho biết kích thước của block là bao nhiêu. Kể từ khi bắt đầu cho đến ngày hôm nay mỗi block được cố định tối đa 1 MB.</li>
@@ -218,7 +218,7 @@
 <li>Transaction List (Tối đa 1MB): Danh sách các giao dịch.</li>
 </ul>
 <p>Đây là block <a target="_blank" rel="noopener" href="https://blockchain.info/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f">đầu tiên</a> của Bitcoin và block <a target="_blank" rel="noopener" href="https://blockchain.info/en/block/0000000000000000003f0bb48eecd4e38c4d07ce88f83ce21dc7a7c94474be2b">gần nhất</a> của Bitcoin trong thời điểm mình viết bài này.</p>
-<h2 id="Merkle-Root-la-gi"><a href="#Merkle-Root-la-gi" class="headerlink" title="Merkle Root là gì?"></a>Merkle Root là gì?</h2><p><img src="/css/images/20180202/merkle-root.PNG" alt="Merkle Root"><br>Như đã nói thì mỗi block có một danh sách tóm tắt của tất cả các giao dịch. Một khi block là một phần của blockchain thì nội dung của nó khó có thể thay đổi hoặc có thể nói là không thể. Các giao dịch được liệt kê như cây merkle (cây băm nhị phân).</p>
+<h2 id="Merkle-Root-la-gi"><a href="#Merkle-Root-la-gi" class="headerlink" title="Merkle Root là gì?"></a>Merkle Root là gì?</h2><p><img src="/blog/css/images/20180202/merkle-root.PNG" alt="Merkle Root"><br>Như đã nói thì mỗi block có một danh sách tóm tắt của tất cả các giao dịch. Một khi block là một phần của blockchain thì nội dung của nó khó có thể thay đổi hoặc có thể nói là không thể. Các giao dịch được liệt kê như cây merkle (cây băm nhị phân).</p>
 <p>Mỗi lá sẽ là một giao dịch và sẽ được thực hiện và xác nhận như mình đã nói ở phần trước trong mục Transactions. Sau đó mỗi giao dịch này sẽ được hash lại bằng mã hóa SHA256 hai lần nghĩa là Hash [Tx3] = SHA256 (SHA256 (Tx3)).<br>Tương tự như vậy để xây dựng một nút cha Hash(23) 32 byte Hash [Tx2] và 32 byte Hash [Tx3] được ghép nối như là một chuỗi hash 64 byte và sau đó SHA256 được áp dụng hai lần để cho ra một Hash 32 byte. Gốc cây là nút trên là hash của tất cả.<br>Định nghĩa là như vậy nhưng mục đích của nó là gì thì phải xét đến việc xác nhận giao dịch. Thông qua kết quả hash của gốc rất dễ dàng để xác định liệu một giao dịch cụ thể có nằm trong block hay không.</p>
 <h2 id="Timestamp-u-Tai-sao-lai-co-thoi-gian-o-day"><a href="#Timestamp-u-Tai-sao-lai-co-thoi-gian-o-day" class="headerlink" title="Timestamp ư? Tại sao lại có thời gian ở đây?"></a>Timestamp ư? Tại sao lại có thời gian ở đây?</h2><p>Tiếp theo là một khái niệm nữa trong cấu trúc của một block. Lặp lại về vấn đề double-spend ở bài trước, ở mạng lưới <strong>bitcoin</strong> thì vấn đề này cũng phải được giải quyết. Nghĩa là cần một giải pháp làm sao để người nhận biết rằng người bán đã không “ký” lên một giao dịch nào trước đó. Và ý tưởng ở đây được đưa ra là giao dịch sớm nhất là giao dịch được chấp nhận không cần quan tâm sau có trường hợp double-spend xảy ra hay không. Và cách duy nhất để xác minh điều đó là tất cả các giao dịch cần được công khai. Những nút trong mạng lưới sẽ biểu quyết (vote) để công nhận một lịch sử giao dịch duy nhất. Một người nhận hợp pháp khi anh ta có thể chứng minh rằng giao dịch nơi mình nhận được là giao dịch sớm nhất trong chuỗi lịch sử giao dịch được cộng đồng công nhận này. Và khi đó sẽ giải quyết được vấn đề nếu có sự gian lận xảy ra ở đây. Người nhận thứ hai có thể dựa vào danh sách tất cả các giao dịch để phát hiện gian lận. Trong trường hợp người gửi không chứng minh được sự sở hữu của tài sản do đó không phải là giao dịch đầu tiên với tài sản này thì cũng chẳng thế thực hiện được giao dịch nào tiếp theo cả. </p>
 <p><strong>Timestamp</strong> được đưa ra ở đây là để thực hiện việc xác minh thời gian đó. Tất nhiên giá trị này cũng được hash và giá trị tiếp theo sẽ bao giá trị thời gian của những block trước đó như đặc tính của blockchain khi đó nó sẽ không thể bị giả mạo.</p>
@@ -261,7 +261,7 @@
 
 
 
-    <a data-url="https://kuanhn.github.io/blog/read/vai-dieu-tu-hoi-tu-ngay-biet-den-bitcoin-2/" data-id="ckxqal7ym0002f1oq4lpf0c5o" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://kuanhn.github.io/blog/read/vai-dieu-tu-hoi-tu-ngay-biet-den-bitcoin-2/" data-id="ckxqc5qbk0002eqoedhoi5af0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -390,7 +390,7 @@
                             <a href="/blog/read/vai-dieu-tu-hoi-tu-ngay-biet-den-bitcoin-2/" class="thumbnail">
     
     
-        <span style="background-image:url(/css/images/20180202/thumbnail.jpg)" alt="Vài điều tự hỏi từ ngày biết đến Bitcoin (P2)" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/css/images/20180202/thumbnail.jpg)" alt="Vài điều tự hỏi từ ngày biết đến Bitcoin (P2)" class="thumbnail-image"></span>
     
     
 </a>
@@ -410,7 +410,7 @@
                             <a href="/blog/read/vai-dieu-tu-hoi-tu-ngay-biet-den-bitcoin-1/" class="thumbnail">
     
     
-        <span style="background-image:url(/css/images/20180131/thumbnail.jpg)" alt="Vài điều tự hỏi từ ngày biết đến Bitcoin (P1)" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/css/images/20180131/thumbnail.jpg)" alt="Vài điều tự hỏi từ ngày biết đến Bitcoin (P1)" class="thumbnail-image"></span>
     
     
 </a>
