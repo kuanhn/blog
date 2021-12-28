@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Space of Kots
+title: Kots blog
 subtitle: Since 1993
 description: Everything Kots want to share
 author: Quan Hoang
 language: en
-timezone: Japan
+timezone: Vietnam
 
 # URL
 ## If your site is put in a subdirectory, set url as 'https://yoursite.com/child' and root as '/child/'
-url: https://kots.space
+url: https://https://kuanhn.github.io
 root: /
 permalink: :category/:title/
 permalink_defaults:
@@ -29,10 +29,13 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+# File name of new posts
+new_post_name: :title.md
 default_layout: post
-titlecase: false # Transform title into titlecase
-external_link: true # Open external links in new tab
+# Transform title into titlecase
+titlecase: false
+# Open external links in new tab
+external_link: true
 filename_case: 1
 render_drafts: false
 post_asset_folder: false
