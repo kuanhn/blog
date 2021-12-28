@@ -12,7 +12,7 @@ timezone: Vietnam
 
 # URL
 ## If your site is put in a subdirectory, set url as 'https://yoursite.com/child' and root as '/child/'
-url: https://https://kuanhn.github.io
+url: https://kuanhn.github.io
 root: /
 permalink: :category/:title/
 permalink_defaults:
