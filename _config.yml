@@ -13,7 +13,7 @@ timezone: Asia/Ho_Chi_Minh
 # URL
 ## If your site is put in a subdirectory, set url as 'https://yoursite.com/child' and root as '/child/'
 url: https://kuanhn.github.io
-root: /
+root: /blog/
 permalink: :category/:title/
 permalink_defaults:
   lang: en
