@@ -5,7 +5,7 @@ tags:
     - blockchain
     - cryptocurrencies
 category: Read
-thumbnail: /images/20180131/thumbnail.jpg
+thumbnail: /css/images/20180131/thumbnail.jpg
 ---
 # Tản mạn
 > Đứng dưới cái tiết trời 3ºC nhìn ngắm nguyệt thực toàn phần âu cũng làm con người ta dễ hoài niệm. Cái tâm trạng đó cũng dễ khiến người ta chỉ cần nhìn vào cái biểu đồ nến thôi cũng gợi nhớ về bao chuyện từ hồi chân ướt chân ráo bước vào tìm hiểu Bitcoin.
@@ -42,20 +42,20 @@ Mọi dữ liệu trên mạng Internet đều rất dễ dàng bị sao chép, 
 Không tìm thì thôi tìm thì lại thấy xuất hiện bao nhiêu là từ khoá mới để tìm hiểu. Thôi cứ từ từ bóc tách từng thằng một đọc xem sao.
 ## Blockchain là gì?
 Khi tìm hiểu tới đây thì mọi đường dẫn đều nói đến Bitcoin thoạt đầu còn nghĩ __blockchain__ là một khái niệm được định nghĩa bên trong Bitcoin. Sau hai ba trang đều có cái mở đầu giống nhau _được phát minh bởi Satoshi Nakamoto dưới dạng phần mềm mã nguồn mở từ năm 2009_ thì mình quyết định tìm luôn cái phát minh đấy để đọc xem nó như thế nào. Và mình tìm thấy paper [Bitcoin: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf) trong vài kết quả search. 
-Tại đây mình lại nhìn thấy __hash__ nhưng được sử dụng trong con trỏ trỏ tới những __block__ liền kề và cứ thế một cách liên tiếp nhau theo một chuỗi (__chain__) những giao dịch (__transactions__). Một cách dễ hình dung hơn thì ở một tài liệu khác mô hình giao dịch được giới thiệu như sau:
+Tại đây mình lại nhìn thấy __hash__ nhưng được sử dụng trong con trỏ trỏ tới những __block__ liền kề và cứ thế một cách liên tiếp nhau theo một chuỗi (__chain__) những giao dịch (__transactions__). Một cách dễ hình dung hơn thì ở một tài liệu khác mô hình giao dịch được giới thiệu như sau:
 
 - Một con trỏ __hash__ có kèm theo giá trị __hash__ của nội dung được trỏ tới.
-![Con trỏ hash](/images/20180131/hash_pointer.png)
+![Con trỏ hash](/css/images/20180131/hash_pointer.png)
 
 - Khi sử dụng con trỏ __hash__ thay cho con trỏ trong việc xây dựng cấu trúc dữ liệu linked list thì ta sẽ có cấu trúc mới được gọi là __blockchain__. 
-![Cấu trúc Blockchain](/images/20180131/blockchain.png)
+![Cấu trúc Blockchain](/css/images/20180131/blockchain.png)
 
 Ra là thế giờ thì đã biết cái định nghĩa của __blockchain__. Hoá ra ở mỗi khối sẽ không chỉ trỏ tới khối trước đó như ở linked list mà còn lưu giá trị hash của khối được trỏ tới. Nếu dùng giá trị hash này ta có thể kiểm tra nội dung của khối được trỏ tới có toàn vẹn hay không. Và cứ thế nếu ta biết được giá trị hash ở cuối một chuỗi ta có thể xác định được nội dung của cả __blockchain__ có bị thay đổi hay không.
 
 ## Transactions đã được Satoshi giới thiệu ứng dụng blockchain như thế nào?
 Đây là hình ảnh được Satoshi mô tả trong paper:
 
-![Chuỗi các giao dịch trong được Satoshi nhắc tới](/images/20180131/transactions.jpg)
+![Chuỗi các giao dịch trong được Satoshi nhắc tới](/css/images/20180131/transactions.jpg)
 
 >Một đồng tiền điện tử được định nghĩa như một chuỗi của những giao dịch của những chữ kí điện tử. Một người chuyển coin cho một người khác bằng cách ký lên __hash__ của __block__ giao dịch trước đó và gắn khoá công khai của người nhận vào cuối của đồng coin. Người nhận có thể xác nhận chữ ký để chứng minh sự sở hữu của mình.
 
@@ -79,7 +79,7 @@ Nếu đọc lại về __blockchain__ và về con trỏ __hash__ thì thấy r
 ## Ví dụ về một đồng tiền thuật toán (Cryptocurrency)?
 Thấm xong được hai mục đầu của cái payper thì mình mới tìm được một ví dụ đơn nhất về đồng tiền thuật toán với tên gọi ___GoofyCoin___.
 
-![GoofyCoin](/images/20180131/goofycoin.png)
+![GoofyCoin](/css/images/20180131/goofycoin.png)
 
 Giả định Goofy có thể tạo ra đồng xu mới với một tuyên bố rằng ông ta làm ra một đồng xu mới với ID duy nhất. Và sau đó bất cứ ai sở hữu một đồng tiền có thể chuyển nó cho người khác bằng cách ký một tuyên bố nói rằng : "chuyển tiền xu này cho người X". Những người nhận hoàn toàn có thể xác minh tính hợp lệ của đồng xu bằng cách đơn giản theo chuỗi và xác minh tất cả các chữ ký trên đường đi.
 
@@ -89,7 +89,7 @@ Nhưng đồng coin Goofy này là tồn tại một vấn đề mang tên __dou
 
 Ban đầu khi đọc mình chưa hiểu được vì sao số dư lại chi tiêu được hai giao dịch. Sau đó mới ngộ ra trong cuộc sống cần phải có ngân hàng để như là bên thứ ba giữa những cuộc giao dịch là như vậy, vì đó là bên đảm bảo điều gian lận kia không xảy ra được. Vậy xem ở xã hội không có ngân hàng của Goofy thì sự gian lận xảy ra như thế nào.
 
-![Double-spending khi sử dụng GoofyCoin](/images/20180131/goofy_coin_double_spending.png)
+![Double-spending khi sử dụng GoofyCoin](/css/images/20180131/goofy_coin_double_spending.png)
 
 Nó sẽ diễn ra như sau:
 - Goofy tạo một giao dịch với Alice.
@@ -101,7 +101,7 @@ Tất nhiên sau đó cả Bob và Chuck đều có thực hiện những công 
 ## Công nghệ blockchain đã giải quyết được bài toán double-spending như thế nào?
 Học theo xã hội của Goofy, Scrooge cũng muốn tạo một đồng coin của riêng mình. Do vì hiểu được vấn đề của gian lận __double-spending__ có thể xảy ra nên Scorooge có ý tưởng đưa lịch sử của tất cả các giao dịch vào __blockchain__ rồi ký xác nhận lên đó.
 
-![ScroogeCoin](/images/20180131/scroogecoin.png)
+![ScroogeCoin](/css/images/20180131/scroogecoin.png)
 
 Về cơ bản việc giao dịch vẫn giống như ở xã hội của Goofy chỉ khác sau mỗi giao dịch ở đây đại diện Scorooge sẽ lấy con trỏ __hash__ và ký xác nhận lên đó rồi thông báo cho tất cả mọi người. Tất nhiên là mọi người trong xã hội của Scorooge đều có thể dùng khoá công khai để xác nhận rằng con trỏ __hash__ này chính là cái đã được chính Scorooge xác thực hay không. Và vẫn như đã nói ở trên, khi biết được con trỏ __hash__ này thì ai cũng có thể dò theo cả chuỗi để xem lịch sử của tất cả các giao dịch.
 
