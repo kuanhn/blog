@@ -6,7 +6,7 @@ tags:
     - cryptocurrencies
     - bitcoin
 category: Read
-thumbnail: /images/20180202/thumbnail.jpg
+thumbnail: /css/images/20180202/thumbnail.jpg
 ---
 >## Liệu Bitcoin có thể là nơi mình kiếm được tiền từ đó?
 
@@ -26,13 +26,13 @@ Không tồn tại nhà điều hành trung ương thì thì các thuật toán 
 # Một block của bitcoin sẽ như thế nào?
 Như đã nói __bitcoin__ được xây dựng dựa trên công nghệ blockchain nên thôi cứ bắt đầu từ đơn vị nhỏ nhất là một block xem nó như thế nào. Dưới đây là hình ảnh mô tả blockchain của __bitcoin__.
 
-![Bitcoin-blockchain](/images/20180202/bitcoin-block-chain.jpeg)
+![Bitcoin-blockchain](/css/images/20180202/bitcoin-block-chain.jpeg)
 
 Ở đó chuỗi chính (màu vàng) bao gồm chuỗi block dài nhất tính từ block khởi đầu (genesis). Block màu đen không được chấp nhận do không đạt sự đồng thuận của mạng lưới.
 
 Còn về chi tiết một block sẽ có những phần như sau:
 
-![Bitcoin’s Block Structure](/images/20180202/bitcoin-block-structure.jpeg)
+![Bitcoin’s Block Structure](/css/images/20180202/bitcoin-block-structure.jpeg)
 
 - Magic number (4 bytes): Đây là một số nhận diện cho mạng Blockchain do đó có giá trị không đổi là 0xD9B4BEF9. Nó chỉ ra điểm _Khởi đầu của block_ và _Dữ liệu từ mạng lưới sản xuất_.
 - Block size (4 bytes): Cho biết kích thước của block là bao nhiêu. Kể từ khi bắt đầu cho đến ngày hôm nay mỗi block được cố định tối đa 1 MB.
@@ -47,7 +47,7 @@ Tất cả các trường vừa rồi sẽ quy định header của một block.
 Đây là block [đầu tiên](https://blockchain.info/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f) của Bitcoin và block [gần nhất](https://blockchain.info/en/block/0000000000000000003f0bb48eecd4e38c4d07ce88f83ce21dc7a7c94474be2b) của Bitcoin trong thời điểm mình viết bài này.
 
 ## Merkle Root là gì?
-![Merkle Root](/images/20180202/merkle-root.PNG)
+![Merkle Root](/css/images/20180202/merkle-root.PNG)
 Như đã nói thì mỗi block có một danh sách tóm tắt của tất cả các giao dịch. Một khi block là một phần của blockchain thì nội dung của nó khó có thể thay đổi hoặc có thể nói là không thể. Các giao dịch được liệt kê như cây merkle (cây băm nhị phân).
 
 Mỗi lá sẽ là một giao dịch và sẽ được thực hiện và xác nhận như mình đã nói ở phần trước trong mục Transactions. Sau đó mỗi giao dịch này sẽ được hash lại bằng mã hóa SHA256 hai lần nghĩa là Hash [Tx3] = SHA256 (SHA256 (Tx3)).
